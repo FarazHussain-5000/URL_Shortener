@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Short URLs</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='DisplayURLs.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>GENERATED URLS</h1>
+        <ul>
+            {% for Short_URL, Original_URL in URL_Dict.items() %}
+                <li><a href="{{ Short_URL }}">{{ Short_URL }}</a> - {{ Original_URL }}</li>
+            {% endfor %}
+            <hr> <!-- Horizontal separator -->
+        </ul>
+
+        <p><b>TOTAL NUMBER OF SHORT URLS GENERATED: {{ NumShortenedURLs }}</b></p>
+    </div>
+</body>
+</html>

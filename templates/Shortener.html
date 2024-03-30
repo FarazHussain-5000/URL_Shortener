@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shortened URL</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Shortener.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>SHORTENED URL: <a href="{{ Short_URL }}">{{ Short_URL }}</a></h1>
+
+        <button onclick="window.location.href='Display_Generated_URLs'">DISPLAY GENERATED URLS</button>
+    </div>
+</body>
+</html>
